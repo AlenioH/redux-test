@@ -1,12 +1,13 @@
+import { INCREASE_COUNT, DECREASE_COUNT } from '../Actions/actionTypes';
 const initialState = {
   count: 0,
 };
 
 export default function counterReducer(state = initialState, action) {
   switch (action.type) {
-    case 'INCREASE_COUNT':
+    case INCREASE_COUNT:
       return { count: state.count + 1 };
-    case 'DECREASE_COUNT':
+    case DECREASE_COUNT:
       return { count: state.count - 1 };
     default:
       return state;
