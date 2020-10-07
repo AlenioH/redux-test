@@ -7,6 +7,7 @@ export const decreaseCount = () => ({
   type: DECREASE_COUNT,
 });
 
+//actually not using this anywhere but ok
 let nextTodoId = 0;
 export const addTodo = (content) => ({
   type: ADD_TODO,
