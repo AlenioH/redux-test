@@ -23,7 +23,7 @@ const store = createStore(
 //--- create action types => actions are JS objects => send data from app to store
 //write the reducer function => pure function => with initial state and cases and default state
 function App() {
-  console.log('store state', store.getState());
+  // console.log('store state', store.getState());
 
   return (
     <div className="App">
