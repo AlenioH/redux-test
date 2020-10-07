@@ -13,8 +13,8 @@ export default function AddTodo() {
 
   function handleAdd(e) {
     e.preventDefault();
-    setId(id + 1);
-    dispatch({ type: ADD_TODO, payload: { id, content: input } });
+
+    dispatch({ type: ADD_TODO, payload: { content: input } });
     // dispatch(addTodo({ content: input }));
     setInput('');
   }
