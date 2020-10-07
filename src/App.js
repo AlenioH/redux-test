@@ -2,7 +2,8 @@ import React from 'react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import './App.css';
-import Counter from './components/Counter';
+import CounterClass from './components/CounterClass';
+import CounterFunctional from './components/CounterFunctional';
 import counterReducer from './reducers/counterReducer';
 const store = createStore(
   counterReducer,
@@ -20,7 +21,8 @@ function App() {
   return (
     <div className="App">
       <Provider store={store}>
-        <Counter />
+        <CounterClass />
+        <CounterFunctional />
       </Provider>
     </div>
   );

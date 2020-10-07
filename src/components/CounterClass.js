@@ -42,6 +42,7 @@ class Counter extends React.Component {
     console.log('this', this);
     return (
       <div>
+        <p>Counter class Component</p>
         <button onClick={this.handleIncrease}> + </button>
         <p>{this.props.count}</p>
         <button onClick={this.handleDecrease}> - </button>{' '}
