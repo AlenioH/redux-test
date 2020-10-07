@@ -1,12 +1,19 @@
 import React from 'react';
-import { createStore } from 'redux';
+import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
+import AddTodo from './components/AddTodo';
 import './App.css';
 import CounterClass from './components/CounterClass';
 import CounterFunctional from './components/CounterFunctional';
 import counterReducer from './reducers/counterReducer';
+import addTodoReducer from './reducers/addTodoReducer';
+
+const rootReducer = combineReducers({
+  counter: counterReducer,
+  todos: addTodoReducer,
+});
 const store = createStore(
-  counterReducer,
+  rootReducer,
   typeof window !== 'undefined' &&
     window.__REDUX_DEVTOOLS_EXTENSION__ &&
     window.__REDUX_DEVTOOLS_EXTENSION__(),
@@ -23,6 +30,7 @@ function App() {
       <Provider store={store}>
         <CounterClass />
         <CounterFunctional />
+        <AddTodo />
       </Provider>
     </div>
   );

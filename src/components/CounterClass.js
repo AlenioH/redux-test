@@ -29,7 +29,7 @@ import { increaseCount, decreaseCount } from '../Actions';
 class Counter extends React.Component {
   static mapStateToProps = (state) => {
     return {
-      count: state.count,
+      count: state.counter.count,
     };
   };
   handleIncrease = () => {
@@ -42,7 +42,7 @@ class Counter extends React.Component {
     console.log('this', this);
     return (
       <div>
-        <p>Counter class Component</p>
+        <p>Counter class comp</p>
         <button onClick={this.handleIncrease}> + </button>
         <p>{this.props.count}</p>
         <button onClick={this.handleDecrease}> - </button>{' '}

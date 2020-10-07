@@ -4,7 +4,8 @@ import { useDispatch } from 'react-redux';
 
 export default function Counter() {
   const dispatch = useDispatch();
-  const counter = useSelector((state) => state.count);
+  const counter = useSelector((state) => state.counter.count);
+  console.log('state', counter);
   //so the point of selector is to pick out certain parts of the state??
   function increase() {
     dispatch({ type: 'INCREASE_COUNT' });
